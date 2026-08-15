@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Register</title>
+
+    <link rel="stylesheet" href="D:\Lab-Tracker\frontend\css\register.css">
+</head>
+
+<body>
+
+    <form action="" method="post" id="register" onsubmit="return checkPassword()">
+
+        <h1>STUDENT REGISTER</h1>
+
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label for="Registration no:-">Registration No:-</label>
+        <input 
+            type="text"
+            id="registration no"
+            name="registration no"
+            placeholder="25153153***"
+            required
+            minlength="11"
+            maxlength="11"
+            pattern="[0-9]{11}"
+            title="Registration number must contain exactly 11 digits"
+        >
+
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+        >
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Abc@123"
+            required
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+            title="Password  also Contains  this Pattern:-!@#$%^&"
+        >
+
+        <label for="confirm-password">Confirm Password</label>
+        <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Enter password again"
+            required
+             title="Password  also Contains  this Pattern:-!@#$%^&"
+        >
+
+
+        <button type="submit" class="btn">
+            Register
+        </button>
+
+        <p>
+            Already have an account?
+            <a href="D:\Lab-Tracker\frontend\html\login.html" id="demo">Login</a>
+    
+        </p>
+
+    </form>
+       <script>
+        document.querySelectorId("#demo");
+
+        function checkPassword() {
+
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+
+                alert("Password and Confirm Password do not match!");
+
+                return false;
+            }
+            else{
+              alert("Registration Successful.\nPlease Login.");
+
+            return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
