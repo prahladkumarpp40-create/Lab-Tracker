@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab Tracker</title>
+    <!-- <link rel="stylesheet" href="subject.css"> -->
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <header class="topbar">
+    <div class="brand"><span class="brand-mark">&lt;/&gt;</span><span>SkillGate</span></div>
+    <div class="lab-name">C++ Programming Lab</div>
+    <div class="account"><span >Reg. No: <b>25153153***</b></span><span class="avatar">♙</span><button class="logout">Logout</button></div>
+  </header>
+      
+    <main>
+      <section class="hero">
+        <div>
+            <h1>C++ Programming Lab</h1>
+            <p>Learn C++ step by step through topic-wise coding practice.</p>
+        </div>
+    </section>
+      <section class="toolbar">
+        <div class="search">
+            
+                <input id="search" type="search" placeholder="Search topics or questions..." />
+            </div>
+            <div class="filters">
+                <button class="filter active" data-filter="All">All</button>
+                <button class="filter" data-filter="Basic">Basic</button>
+                <button class="filter" data-filter="Medium">Medium</button>
+                <button class="filter" data-filter="Hard">Hard</button>
+            </div>
+        </section>
+      <div id="units"></div>
+      
+    </main>
+  </div>
+    <footer>
+        
+    </footer>
+    <script src="../js/cpp.js"></script>
+      <script>
+    document.querySelector(".logout").addEventListener("click", function () {
+
+        // Remove saved student data
+        localStorage.removeItem("selectedLab");
+        localStorage.removeItem("selectedTopic");
+
+        // Go back to login page
+        window.location.href = "index.html";
+    });
+    </script>
+</body>
+</html>
