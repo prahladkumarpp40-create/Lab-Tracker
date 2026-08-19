@@ -1,0 +1,436 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #092b52;
+}
+
+
+/* Top Bar */
+.topbar {
+    height: 88px;
+    background: #003b73;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#web_name{
+    text-decoration: none;
+    color: white;
+}
+
+.brand-mark {
+    background: white;
+    color: #003b73;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.lab-name {
+    font-size: 24px;
+}
+
+
+
+.account {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+
+    background: white;
+    color: #003b73;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout {
+    padding: 10px 18px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.logout:hover {
+    background: white;
+    color: #003b73;
+}
+
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+
+/* Heading */
+.hero h1 {
+    color: #003b73;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+    font-size: 20px;
+}
+
+
+/* Search and Filters */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.search {
+    width: 500px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 13px 18px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+}
+
+.filter {
+    padding: 11px 23px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.filter:hover {
+    background: #eaf2ff;
+}
+
+.filter.active {
+    background: #003b73;
+    color: white;
+}
+
+
+/* Unit */
+.container {
+    margin-top: 0;
+}
+
+.unit {
+    background: white;
+    border: 1px solid #dce4ef;
+    border-radius: 20px;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+
+.unit-header {
+    min-height: 88px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.unit-header:hover {
+    background: #fafcff;
+}
+
+.unit-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.unit-number {
+    color: #286bd9;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.unit-title h2 {
+    font-size: 23px;
+}
+
+
+/* Progress */
+.unit-progress {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-bar {
+    width: 225px;
+    height: 10px;
+
+    background: #e3eaf3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: #286bd9;
+}
+
+
+/* Unit Content */
+.unit-content {
+    display: none;
+}
+
+.unit-header.active + .unit-content {
+    display: block;
+}
+
+
+/* Topic */
+.topic {
+    margin: 0 30px;
+}
+
+.topic-header {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid #e2e7ee;
+    cursor: pointer;
+}
+
+.topic-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topic-arrow {
+    transition: transform 0.2s;
+}
+
+.topic-header.active .topic-arrow {
+    transform: rotate(90deg);
+}
+
+.question-count {
+    color: #647b96;
+    font-size: 14px;
+}
+
+
+
+/* Questions */
+.questions {
+    display: none;
+    padding: 5px 0 15px;
+}
+
+.topic-header.active + .questions {
+    display: block;
+}
+
+.question {
+    min-height: 60px;
+
+    margin: 6px 0;
+    padding: 0 16px;
+
+    background: #f8faff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.number {
+    width: 30px;
+    color: #71849a;
+}
+
+.question-name {
+    flex: 1;
+}
+
+
+/* Difficulty */
+.difficulty {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.basic {
+    background: #d9f4e7;
+    color: #087943;
+}
+
+.medium {
+    background: #fff0d2;
+    color: #a56200;
+}
+
+.hard {
+    background: #ffe0e4;
+    color: #d52d3e;
+}
+
+
+/* Solve Button */
+.solve-btn {
+    width: 85px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #286bd9;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.solve-btn:hover {
+    background: #1557c0;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .topbar {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lab-name {
+        display: none;
+    }
+
+    .account {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .filters {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .unit-header {
+        padding: 15px;
+    }
+
+    .unit-title {
+        gap: 10px;
+    }
+
+    .unit-number {
+        font-size: 16px;
+    }
+
+    .unit-title h2 {
+        font-size: 16px;
+    }
+
+    .progress-bar {
+        width: 90px;
+    }
+
+    .topic {
+        margin: 0 12px;
+    }
+
+    .question {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .difficulty {
+        display: none;
+    }
+
+    .solve-btn {
+        width: 65px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+    padding: 20px;
+}
+
+#register {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 35px 32px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    animation: formShow 0.7s ease;
+}
+
+#register h1 {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+    color: #1f2937;
+
+    font-size: 27px;
+
+    letter-spacing: 1px;
+}
+
+#register label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+#register input,
+#register select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    margin-bottom: 18px;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+}
+
+#register input:focus,
+#register select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+#register select {
+
+    cursor: pointer;
+}
+
+#register .btn {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#register .btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+#register .btn:active {
+
+    transform: translateY(0);
+}
+
+#register p {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+#register p a {
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+#register p a:hover {
+
+    color: #7c3aed;
+
+    text-decoration: underline;
+}
+
+@keyframes formShow {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    #register {
+
+        padding: 28px 22px;
+
+        border-radius: 15px;
+    }
+
+    #register h1 {
+
+        font-size: 23px;
+    }
+
+}
